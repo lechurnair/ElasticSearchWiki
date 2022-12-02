@@ -21,3 +21,9 @@ To add the json file from scrapper to elasticsearch
 ```
    $ python3 Wiki_to_Indices.py
 ```
+To run the website using python flask
+
+```
+   $ export FLASK_APP=website.py
+   $ flask run
+```
