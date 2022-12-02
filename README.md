@@ -15,9 +15,9 @@ ranked list of relevant results as output.
 To scrape wikipages following few seed wikipedia pages
 
 ```
-    python3 Scraping.py
+   $ python3 Scraping.py
 ```
 To add the json file from scrapper to elasticsearch
 ```
-    python3 Wiki_to_Indices.py
+   $ python3 Wiki_to_Indices.py
 ```
