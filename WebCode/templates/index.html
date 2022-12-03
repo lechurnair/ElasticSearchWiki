@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+<script type="text/javascript" src="{{ url_for('static',filename='script/script.js') }}">
+  
+</script>
+
+</head>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/submit" method='POST'>
+  <label for="Type your query here">Type your query here:</label><br>
+  <input type="text" id="query" name="query" value="0"><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
