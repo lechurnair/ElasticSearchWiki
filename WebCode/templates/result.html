@@ -1,8 +1,19 @@
 <html>
 
-<h2>Final Results</h2>
+<h2>Did You Mean</h2>
 
 <body>
+    {% for item in suggest %}
+        {% for item1 in item['options'] %}
+
+<div class="card p-3  py-4" style="margin-top: 1rem;">
+{{ item1['text'] }} 
+
+
+{% endfor %}
+{% endfor %}
+
+<h2>Results</h2>
 {% for item in result %}
 
 <div class="card p-3  py-4" style="margin-top: 1rem;">
