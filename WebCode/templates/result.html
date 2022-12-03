@@ -1,0 +1,15 @@
+<html>
+
+<h2>Final Results</h2>
+
+<body>
+{% for item in result %}
+
+<div class="card p-3  py-4" style="margin-top: 1rem;">
+{{ item['_source']['title'] }} <br>
+
+{% endfor %}
+
+</body>
+
+</html>
