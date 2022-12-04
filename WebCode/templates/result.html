@@ -1,26 +1,36 @@
+
+<!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='css/result.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
 
-<h2>Did You Mean</h2>
 
-<body>
+</head>
+<body >
+  
+<h1 class="heading">Results</h1> <br></br>
     {% for item in suggest %}
         {% for item1 in item['options'] %}
 
-<div class="card p-3  py-4" style="margin-top: 1rem;">
+<div>
 {{ item1['text'] }} 
 
 
 {% endfor %}
 {% endfor %}
 
-<h2>Results</h2>
-{% for item in result %}
+<div >
 
-<div class="card p-3  py-4" style="margin-top: 1rem;">
+{% for item in result %}
+<a href={{ item['_source']['link'] }} >
+<div>
 {{ item['_source']['title'] }} <br>
+</a>
 
 {% endfor %}
+</div>
+
 
 </body>
-
 </html>
