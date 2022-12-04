@@ -11,20 +11,17 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
-  
 
 @app.route('/submit', methods=['POST','GET'])
 def submit():
     if request.method == 'POST':
         Q = request.form['query']
-
+        model_name = request.form['Model']
+        doc_no = request.form['Docno']
         body = {
-            "query" : {
-                "match" : {
-                "content" : Q
-    }
-  },
-  "size": 100
+            "query": {"simple_query_string": {
+            "query": Q}},
+  "size": int(doc_no)
         }
         body1 = {"suggest": {
     "my-suggestion" : {
@@ -37,8 +34,13 @@ def submit():
     }
   }
    }
-        res = es.search(index="wikisearch1", body=body)
-        res1 = es.search(index = "wikisearch1", body = body1)
+        if model_name == 'BM25':   
+          res = es.search(index="wikisearch1", body=body)
+          res1 = es.search(index = "wikisearch1", body = body1)
+        else:
+          res = es.search(index="wikisearch2", body=body)
+          res1 = es.search(index = "wikisearch2", body = body1)
+          #print("Arun")
     else:
         print("error occured while making request")
 	
