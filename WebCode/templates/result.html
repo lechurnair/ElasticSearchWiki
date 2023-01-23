@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,31 +6,39 @@
 
 
 </head>
-<body >
-  
-<h1 class="heading">Results</h1> <br></br>
+<h1 class="heading">Final Results</h1>
 
-<div class="s003">
-    {% for item in suggest %}
+<body>
+
+<div class="dym">    
+    <div class="each">
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 7226e4afcb8b32a5e66ebde76d3ceac03830ece2
+    {% for item in suggest if not break %} 
+    Did you mean
+        <div class="suggestions">
         {% for item1 in item['options'] %}
+            {{ item1['text'] }} 
+        {% endfor %}
+        </div>
+    instead of {{ item['text'] }}
+    <br>
+    {% endfor %}
+    </div>
 
-<div>
-{{ item1['text'] }} 
-
-
-{% endfor %}
-{% endfor %}
-
-<div >
-
-{% for item in result %}
-<a href={{ item['_source']['link'] }} >
-<div>
-{{ item['_source']['title'] }} <br>
-</a>
-
-{% endfor %}
 </div>
+
+<div class="results">
+    <!-- <h2 class="sub-heading">Results</h2> -->
+    {% for item in result %}
+
+    <div style="margin-top: 1rem;">
+        <a href={{ item['_source']['link'] }}>{{ item['_source']['title'] }}</a> <br>
+        <!-- <p class="summary"> {{ item['_source']['content'] }} </p> <br> -->
+        {% endfor %}
+
 </div>
 
 </body>
