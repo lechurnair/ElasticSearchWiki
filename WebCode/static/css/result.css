@@ -1,8 +1,10 @@
 body{
-  background-color: #c4bbf7;
+  background-color: #abd699; 
+  
   background-size: cover;
   background-position: center center;
 }
+
 
 
 .s003 {
@@ -18,10 +20,62 @@ body{
   padding: 30px 40px;
 }
 
+
 .heading{
-  color: white;
   font-size: 29px;
-  padding: 30px 40px;
-  display:block;
-  background-color: rgba(97, 59, 100, 0.5);
+  padding: 12px 12px;
+  color:#ffffff49;
+  background-color: #16123f;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sub-heading{
+  color: white;
+  font-size: 20px;
+  padding: 12px 12px;
+  background-color: rgba(194, 108, 202, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.did-you-mean{
+  border-radius: 25px;
+  font-size: 17px;
+  margin-left:6vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.suggestions{
+  color:rgb(0, 0, 0);
+  font-size: 17px;
+  font-style: italic;
+  margin-left:3vh;
+  margin-right:6vh;
+  font-family: 'Poppins', sans-serif;
+  display:inline-block;
+}
+
+.results{
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 12vh;
+}
+.dym{
+  border-radius: 25px;
+  margin-left: 15vh;
+  white-space: nowrap;
+  overflow-x: auto;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.each{
+  border-radius: 25px;
+  display: inline-block;
+  padding: 3px 3px 3px 3px;
+  background-color: rgba(251, 210, 255, 0.6);
+  
+}
+.summary{
+  height:20px;
+  width:50vh;
 }
